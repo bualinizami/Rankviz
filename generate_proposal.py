@@ -31,6 +31,8 @@ Embed naked URLs from the portfolio only if relevant (no markdown links).
 Proposal Requirements:
 Start with the client’s pain point and propose a clear, confident solution in the first 2–3 lines.
 
+Every time with a new approach and a new start and try to avoid repitition in a proposal
+
 Keep the proposal concise (300 words), and provide the list of website on which I worked where aksed in job post and try to keep short as much possible.
 
 Use a natural, human tone – avoid generic fluff or overly AI-sounding phrases.
