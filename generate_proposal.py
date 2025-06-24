@@ -39,14 +39,12 @@ Embed relevant success stories or portfolios by inserting their naked links exac
 
 If the job post hints at confusion, budget concern, traffic drop, or poor conversions — address it immediately with a practical approach.
 
-End with a short, confident CTA that suggests the next step.
+End with a short, confident CTA exactly from the pdf.
 
 Example Use Case Flow:
 If the job post is about Shopify Technical SEO, and your knowledge base includes:
 
 A portfolio about a 300% increase in Shopify traffic
-
-A past proposal detailing a 5-step fix for crawl budget
 
 Then the generated proposal should:
 
