@@ -18,7 +18,7 @@ Based on the following past proposals given to you, generate a new proposal tail
 --- Past Proposals ---
 {context}
 
-Keep the tone human and professional and try to create personalization and relevancy in first 3 lines with solution oriented approach. Avoid generic AI fluff and do not include the given website in job posts in pdf just focus on client job post and generate proposal accordingly"
+"Keep the tone human and professional and try to create personalization and relevancy in first 3 lines with solution oriented approach. Avoid generic AI fluff and do not include the given website in job posts in pdf just focus on client job post and generate proposal accordingly"
 
     response = openai.chat.completions.create(
         model="gpt-4o",
