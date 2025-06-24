@@ -31,7 +31,7 @@ Embed naked URLs from the portfolio only if relevant (no markdown links).
 🧩 Proposal Requirements:
 Start with the client’s pain point and propose a clear, confident solution in the first 2–3 lines.
 
-Keep the proposal concise, and provide the list of website on which I worked where aksed in job post.
+Keep the proposal concise, and provide the list of website on which I worked where aksed in job post and try to keep short as much possible.
 
 Use a natural, human tone – avoid generic fluff or overly AI-sounding phrases.
 
@@ -48,13 +48,11 @@ A portfolio about a 300% increase in Shopify traffic
 
 A past proposal detailing a 5-step fix for crawl budget
 
-A success story hosted at https://yourdomain.com/shopify-seo-results
-
 Then the generated proposal should:
 
-Open with a statement like:
-"Noticed your Shopify store's traffic has hit a plateau – I've helped brands facing the same issue triple their organic reach by fixing deep crawl inefficiencies and page indexing mismatches."
-"""
+# Open with a statement like:
+# "Noticed your Shopify store's traffic has hit a plateau – I've helped brands facing the same issue triple their organic reach by fixing deep crawl inefficiencies and page indexing mismatches."
+# """
 
     response = openai.chat.completions.create(
         model="gpt-4o",
