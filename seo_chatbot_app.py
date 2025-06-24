@@ -10,7 +10,7 @@ genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 # Load all PDF text from ./data/
 @st.cache_data
-def load_pdf_contexts(folder_path="./data"):
+def load_pdf_contexts(folder_path="data.pdf"):
     context_texts = []
     for filename in os.listdir(folder_path):
         if filename.endswith(".pdf"):
