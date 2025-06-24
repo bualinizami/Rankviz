@@ -6,7 +6,7 @@ import numpy as np
 
 st.set_page_config(page_title="Proposal Generator", layout="centered")
 
-st.title("📄 Upwork Proposal Generator (Powered by Gemini 1.5)")
+st.title("📄 Upwork Proposal Generator (Rankviz)")
 job_input = st.text_area("Paste a job description here:", height=250)
 
 @st.cache_resource
