@@ -1,6 +1,6 @@
 import fitz  # PyMuPDF
 
-def extract_proposals_from_pdf(pdf_path="Data.pdf"):
+def extract_proposals_from_pdf(pdf_path="data.pdf"):
     doc = fitz.open(pdf_path)
     full_text = ""
     for page in doc:
