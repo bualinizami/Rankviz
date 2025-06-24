@@ -22,7 +22,7 @@ Keep the tone human and consultative. Be concise (under 250 words) and avoid gen
 """
 
     response = openai.chat.completions.create(
-        model="o4-mini-2025-04-16",
+        model="o4-mini",
         messages=[
             {"role": "system", "content": "You are an experienced SEO proposal writer for Upwork."},
             {"role": "user", "content": prompt}
