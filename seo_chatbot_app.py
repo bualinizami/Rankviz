@@ -1,44 +1,76 @@
 import streamlit as st
+import fitz  # PyMuPDF
+import faiss
+import numpy as np
 import google.generativeai as genai
-import os
+from sklearn.metrics.pairwise import cosine_similarity
+from sentence_transformers import SentenceTransformer
 
-# Use API key from Streamlit Secrets or .env fallback
-GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"] if "GEMINI_API_KEY" in st.secrets else os.getenv("GEMINI_API_KEY")
+# ---------- CONFIG ---------- #
+GEMINI_API_KEY = "your_google_api_key"
+PDF_PATH = "your_proposals.pdf"
+
+# Initialize Gemini
 genai.configure(api_key=GEMINI_API_KEY)
+model = genai.GenerativeModel("models/gemini-1.5-flash")
 
-# Streamlit page settings
-st.set_page_config(page_title="SEO Proposal Generator", layout="centered")
-st.title("📄 SEO Proposal Generator (Rankviz)")
+# Load local embedding model (for proposal similarity)
+embed_model = SentenceTransformer("all-MiniLM-L6-v2")
 
-st.write("Paste a job post and get a high-quality SEO proposal tailored to the client’s requirements.")
+# ---------- LOAD & EMBED PROPOSALS ---------- #
+@st.cache_resource
+def load_proposals():
+    doc = fitz.open(PDF_PATH)
+    text = ""
+    for page in doc:
+        text += page.get_text()
+    # Assuming each proposal is separated by a line or heading
+    proposals = text.split("\n\n")  # Adjust based on real format
+    return [p.strip() for p in proposals if len(p.strip()) > 100]
 
-job_post = st.text_area("🔍 Job Post", height=300, placeholder="Paste an SEO-related job post from Upwork or another platform")
+@st.cache_resource
+def embed_proposals(proposals):
+    vectors = embed_model.encode(proposals)
+    index = faiss.IndexFlatL2(vectors.shape[1])
+    index.add(np.array(vectors))
+    return index, vectors, proposals
+
+proposals = load_proposals()
+index, vectors, raw_proposals = embed_proposals(proposals)
+
+# ---------- STREAMLIT UI ---------- #
+st.title("💼 Upwork Proposal Generator (Gemini 1.5 Flash)")
+job_post = st.text_area("Paste the Upwork job post:", height=300)
 
 if st.button("Generate Proposal"):
     if not job_post.strip():
-        st.warning("⚠️ Please enter a job post.")
+        st.warning("Please paste a job post to proceed.")
     else:
-        with st.spinner("Generating proposal using Gemini..."):
-            prompt = f"""
-You are an experienced SEO professional writing short, natural-sounding proposals for freelance clients.
+        # Embed job post
+        job_vector = embed_model.encode([job_post])
+        scores, indices = index.search(np.array(job_vector), 3)
 
-Write a personalized and solution oriented approach proposal for the following job post:
+        # Retrieve top proposals
+        similar_proposals = "\n---\n".join([raw_proposals[i] for i in indices[0]])
 
----
+        # Gemini prompt
+        prompt = f"""
+You are a professional Upwork proposal writer.
+
+Below is a new job post. After that, you’ll see some similar past proposals.
+
+Write a new custom proposal that reflects the tone and structure of these examples.
+
+Job Post:
 {job_post}
----
 
-**Proposal rules:**
-- DO NOT use phrases like "I'm thrilled", "I'm excited", or "as a seasoned expert"
-- Start with: "Based on your requirements...", or "After reviewing your needs..."
-- Be conversational but professional
-- Suggest 3–4 specific next steps
-- End with a clear, low-pressure call to action
+Relevant Proposals:
+{similar_proposals}
 
-Only respond with the proposal — no headers or extra commentary.
+Now write a tailored proposal that sounds natural, strategic, and client-focused.
 """
-            model = genai.GenerativeModel("gemini-1.5-flash")
-            response = model.generate_content(prompt)
 
-            st.success("✅ Proposal Generated!")
+        with st.spinner("Generating proposal..."):
+            response = model.generate_content(prompt)
+            st.subheader("📄 Generated Proposal")
             st.markdown(response.text)
