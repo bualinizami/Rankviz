@@ -62,7 +62,7 @@ Open with a statement like:
             {"role": "system", "content": system_prompt.strip()},
             {"role": "user", "content": user_prompt.strip()}
         ],
-        temperature=0.7,
+        temperature=0.9,
         max_tokens=600
     )
     return response.choices[0].message.content.strip()
