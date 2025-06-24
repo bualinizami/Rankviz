@@ -1,6 +1,6 @@
 streamlit
 PyMuPDF
-google-generativeai
 faiss-cpu
 python-dotenv
 tqdm
+openai
