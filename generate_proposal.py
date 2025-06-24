@@ -10,7 +10,7 @@ def generate_proposal(job_description, similar_proposals):
     prompt = f"""
 You are a professional SEO freelancer on Upwork.
 
-Based on the following past proposals written by you, generate a new proposal tailored to this job.
+Based on the following past proposals given to you, generate a new proposal tailored to this job.
 
 --- Job Description ---
 {job_description}
@@ -18,7 +18,7 @@ Based on the following past proposals written by you, generate a new proposal ta
 --- Past Proposals ---
 {context}
 
-Keep the tone human and consultative. Be concise (under 250 words) and avoid generic AI fluff.
+Keep the tone human and consultative. Be solution oriented in first 3 lines and avoid generic AI fluff and do not include the given website in job posts in pdf just focus on client job post and generate proposal accordingly.
 """
 
     response = openai.chat.completions.create(
