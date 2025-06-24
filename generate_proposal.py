@@ -48,8 +48,8 @@ A portfolio about a 300% increase in Shopify traffic
 
 Then the generated proposal should:
 
-Open with a statement like:
-"Noticed your Shopify store's traffic has hit a plateau – I've helped brands facing the same issue triple their organic reach by fixing deep crawl inefficiencies and page indexing mismatches."
+# Open with a statement like:
+# "Noticed your Shopify store's traffic has hit a plateau – I've helped brands facing the same issue triple their organic reach by fixing deep crawl inefficiencies and page indexing mismatches."
 """
 
     response = openai.chat.completions.create(
