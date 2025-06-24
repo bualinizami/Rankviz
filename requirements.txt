@@ -1,8 +1,6 @@
-scikit-learn
 streamlit
 PyMuPDF
-faiss-cpu
-numpy
-sentence-transformers
 google-generativeai
-scikit-learn
+faiss-cpu
+python-dotenv
+tqdm
