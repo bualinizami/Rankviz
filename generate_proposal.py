@@ -41,18 +41,18 @@ If the job post hints at confusion, budget concern, traffic drop, or poor conver
 
 End with a short, confident CTA that suggests the next step.
 
-# Example Use Case Flow:
-# If the job post is about Shopify Technical SEO, and your knowledge base includes:
+Example Use Case Flow:
+If the job post is about Shopify Technical SEO, and your knowledge base includes:
 
-# A portfolio about a 300% increase in Shopify traffic
+A portfolio about a 300% increase in Shopify traffic
 
-# A past proposal detailing a 5-step fix for crawl budget
+A past proposal detailing a 5-step fix for crawl budget
 
-# Then the generated proposal should:
+Then the generated proposal should:
 
-# Open with a statement like:
-# "Noticed your Shopify store's traffic has hit a plateau – I've helped brands facing the same issue triple their organic reach by fixing deep crawl inefficiencies and page indexing mismatches."
-# """
+Open with a statement like:
+"Noticed your Shopify store's traffic has hit a plateau – I've helped brands facing the same issue triple their organic reach by fixing deep crawl inefficiencies and page indexing mismatches."
+"""
 
     response = openai.chat.completions.create(
         model="gpt-4o",
