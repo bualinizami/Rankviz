@@ -8,7 +8,7 @@ genai.configure(api_key=GEMINI_API_KEY)
 
 # Streamlit page settings
 st.set_page_config(page_title="SEO Proposal Generator", layout="centered")
-st.title("📄 SEO Proposal Generator (Gemini)")
+st.title("📄 SEO Proposal Generator (Rankviz)")
 
 st.write("Paste a job post and get a high-quality SEO proposal tailored to the client’s requirements.")
 
@@ -22,7 +22,7 @@ if st.button("Generate Proposal"):
             prompt = f"""
 You are an experienced SEO professional writing short, natural-sounding proposals for freelance clients.
 
-Write a concise and personalized proposal (max 200 words) for the following job post:
+Write a personalized and solution oriented approach proposal for the following job post:
 
 ---
 {job_post}
