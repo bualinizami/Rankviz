@@ -1,19 +1,33 @@
-import google.generativeai as genai
+import openai
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def generate_proposal(job_description, similar_proposals):
     context = "\n\n".join(similar_proposals)
     prompt = f"""
 You are a professional SEO freelancer on Upwork.
-Based on the following past proposals (written in the user's tone), write a fresh, tailored proposal for this job:
+
+Based on the following past proposals written by you, generate a new proposal tailored to this job.
 
 --- Job Description ---
 {job_description}
 
---- Relevant Past Proposals ---
+--- Past Proposals ---
 {context}
 
-Write a persuasive and non-generic proposal under 250 words, keep a human and consultative tone.
+Keep the tone human and consultative. Be concise (under 250 words) and avoid generic AI fluff.
 """
-    model = genai.GenerativeModel("gemini-1.5-flash")
-    response = model.generate_content(prompt)
-    return response.text
+
+    response = openai.chat.completions.create(
+        model="gpt-4o",
+        messages=[
+            {"role": "system", "content": "You are an experienced SEO proposal writer for Upwork."},
+            {"role": "user", "content": prompt}
+        ],
+        temperature=0.7,
+        max_tokens=600
+    )
+    return response.choices[0].message.content.strip()
