@@ -8,7 +8,7 @@ from sentence_transformers import SentenceTransformer
 
 # ---------- CONFIG ---------- #
 GEMINI_API_KEY = "your_google_api_key"
-PDF_PATH = "your_proposals.pdf"
+PDF_PATH = "data.pdf"
 
 # Initialize Gemini
 genai.configure(api_key=GEMINI_API_KEY)
