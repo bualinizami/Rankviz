@@ -37,7 +37,7 @@ Write a concise and personalized proposal (max 200 words) for the following job 
 
 Only respond with the proposal — no headers or extra commentary.
 """
-            model = genai.GenerativeModel("gemini-pro")
+            model = genai.GenerativeModel("gemini-1.5-flash")
             response = model.generate_content(prompt)
 
             st.success("✅ Proposal Generated!")
