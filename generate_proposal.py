@@ -28,6 +28,6 @@ Keep the tone human and consultative. Be concise (under 250 words) and avoid gen
             {"role": "user", "content": prompt}
         ],
         temperature=0.7,
-        max_tokens=600
+        # max_tokens=600
     )
     return response.choices[0].message.content.strip()
