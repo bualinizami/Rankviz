@@ -29,8 +29,7 @@ Showcase related success stories or previous results.
 Embed naked URLs from the portfolio only if relevant (no markdown links).
 
 Proposal Requirements:
-Start with the client’s pain point and propose a clear, confident solution in the first 2–3 linesn and do not say I understand.
-
+Create personalized proposal and create a hook in first three lines and merge a relevant case study with it
 Every time with a new approach and a new start and try to avoid repitition in a proposal
 
 Keep the proposal concise (300 words), and provide the list of website on which I worked where aksed in job post and try to keep short as much possible.
