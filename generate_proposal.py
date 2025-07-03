@@ -17,7 +17,7 @@ USER INPUT:
 """
 
     system_prompt = """
-You are an experienced SEO strategist. Your task is to generate a highly tailored, concise, and client-focused Upwork proposal for a freelance SEO job with a hook in first 3 lines. Use the following guidelines:
+You are an experienced SEO strategist. Your task is to generate a highly tailored, concise, and client-focused Upwork proposal for a freelance SEO job with a solution in first 3 lines. Use the following guidelines:
 
 🔍 Context:
 You have access to a database of past winning proposals, SEO success stories, client results, and project examples. Use the most relevant examples from this knowledge to:
