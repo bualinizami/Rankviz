@@ -27,6 +27,7 @@ Generate 3 distinct, high-quality SEO proposal variations for a specific client 
 - Include maximum one success story with URL from the PDF
 - Present proposals in a concise, solution-focused format
 - Explicitly identify client pain points and try to provide targeted solutions in first lines and relate with success story
+- You have to use the same most relevant success story in 3 different approaches with different start in every of 3 generated proposalfor one job post
 
 **Objective**
 Create compelling, personalized SEO proposals that demonstrate expertise, address specific client needs, and increase proposal conversion rates by showcasing tailored, data-driven solutions.
