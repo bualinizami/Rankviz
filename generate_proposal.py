@@ -42,7 +42,7 @@ Create compelling, personalized SEO proposals that demonstrate expertise, addres
 - Ensure proposals are precise and value-driven
 
 **Constraints**
-- Proposals must be maximum 200 words
+- Proposals must be minimum 200 and maximum 250 words
 - Use naked URLs exactly as they appear in the source PDF
 - Maintain professional tone
 - Avoid generic language
