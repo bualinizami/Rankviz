@@ -43,9 +43,6 @@ A quick-win statement
 A niche-matched question or insight
 A request for their URL (only when appropriate)
 make it feel custom, and avoid generic intros like “I saw your job post…”
-Examples of your tone:
-“Need a local SEO push? I ranked a service site #1 for ‘labor hire Melbourne’ and boosted GMB traffic by 215%.”
-“Launching a new SaaS site? I grew [https://resimpli.com] from 0 to 107K traffic and DR 44 → 74 in 6 months.”
 2. Relevance + Results (2–3 lines)
 Echo the main words in the job post: e.g., “Shopify,” “Local SEO,” “Backlink,” “Traffic Growth,” “Technical Audit”
 Add matching success story, link included.
