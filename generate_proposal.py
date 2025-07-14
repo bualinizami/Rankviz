@@ -26,7 +26,7 @@ Generate 3 distinct, high-quality SEO proposal variations for a specific client 
 - Incorporate relevant portfolios matching the job requirements
 - Include one success story URL from the PDF
 - Showcase previous achievements with direct URL references
-- Present proposals in a concise (Maximum 200 words), solution-focused format
+- Present proposals in a concise (250 to 300 words), solution-focused format
 - Explicitly identify client pain points and provide targeted solutions
 
 **Objective**
