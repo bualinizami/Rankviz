@@ -27,7 +27,7 @@ Generate 3 distinct, high-quality SEO proposal variations for a specific client 
 - Include one naked URL reference to a direct success story
 - Ensure proposals are concise (200-250 words) and solution-focused
 - Explicitly identify and address client-specific pain points
-- do not make headings
+- do not make headings inside the generated proposals
 **Objective**
 Craft proposal variations that:
 - Capture immediate attention with a compelling, personalized opening
