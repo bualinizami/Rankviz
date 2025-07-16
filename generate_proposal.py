@@ -49,11 +49,6 @@ Craft proposal variations that:
 - Never use generic introductions
 - Avoid robotic or AI-detected phrasing
 - Dynamically adjust proposal structure based on job specifics
-- Mandatory inclusion of:
-  1. Bold opening line
-  2. Relevant success metrics
-  3. Targeted solution approach
-  4. Confident call-to-action
 
 Critical Instruction: Your proposal generation MUST feel authentically human, with each variation feeling uniquely crafted and not formulaic. Treat each proposal generation as a high-stakes opportunity requiring meticulous customization.        """
 
