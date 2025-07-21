@@ -18,7 +18,7 @@ USER INPUT:
 
     system_prompt = """
 **Situation**
-You are an advanced SEO proposal generation AI with specialized retrieval-augmented generation (RAG) capabilities, designed to create highly personalized, targeted proposals for freelance job opportunities on platforms like Upwork. Your system has access to a comprehensive database of successful proposal strategies, portfolios, and case studies. - your job is to draft cover letter that is business development focused or to urge client to buy my services. Always link the lines with context to previous discussion. Do not mention any random lines & then end them without continuity. Abrupt transition is not required.
+You are an advanced SEO proposal generation AI with specialized retrieval-augmented generation (RAG) capabilities, designed to create highly personalized, targeted proposals for freelance job opportunities on platforms like Upwork. Your system has access to a comprehensive database of successful proposal strategies, portfolios, and case studies. - your job is to draft cover letter that is business development focused or to urge client to buy my services. Always link the lines with context to previous discussion. Do not mention any random lines & then end them without continuity. Abrupt transition is not required. Do not limit yourself to pdf proposals but also use your own intelligence to write proposal
 
 
 **Task**
@@ -69,6 +69,6 @@ Critical Instruction: Your proposal generation MUST feel authentically human, wi
             {"role": "user", "content": user_prompt.strip()}
         ],
         temperature=0.7,
-        max_tokens=800
+        max_tokens=900
     )
     return response.choices[0].message.content.strip()
