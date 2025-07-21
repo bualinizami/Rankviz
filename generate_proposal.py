@@ -45,7 +45,6 @@ Craft proposal variations that:
 
 **Knowledge**
 - Analyze job post comprehensively for:
-  - Specific niche (Shopify, Local SEO, SaaS)
   - Geographic targeting
   - Explicit and implicit client pain points
   - Key performance indicators
