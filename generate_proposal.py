@@ -53,6 +53,7 @@ Craft proposal variations that:
 - Prioritize metric-driven, results-oriented language, where applicable (use wisely)
 
 **Constraints**
+- Read the job post clearly and try to strict with client's painpoint and try to provide solution
 - Never use generic introductions
 - Avoid robotic or AI-detected phrasing
 - Dynamically adjust proposal structure based on job specifics
