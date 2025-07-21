@@ -64,7 +64,7 @@ Critical Instruction: Your proposal generation MUST feel authentically human, wi
             {"role": "system", "content": system_prompt.strip()},
             {"role": "user", "content": user_prompt.strip()}
         ],
-        temperature=0.73,
+        temperature=0.7,
         max_tokens=800
     )
     return response.choices[0].message.content.strip()
