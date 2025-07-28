@@ -92,6 +92,6 @@ Each proposal must feel authentically human, uniquely written, and free from any
             {"role": "user", "content": user_prompt.strip()}
         ],
         temperature=0.7,
-        max_tokens=900
+        max_tokens=1100
     )
     return response.choices[0].message.content.strip()
